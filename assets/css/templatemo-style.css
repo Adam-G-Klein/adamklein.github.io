@@ -13,7 +13,7 @@ body {
 }
 
 #page-wraper {
-    background: url(../images/page-bg.jpg) no-repeat center center fixed;
+    background: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,6 +55,7 @@ h4 {
 img {
     width: 100%;
     overflow: hidden;
+    background: white;
 }
 
 ul {
@@ -129,15 +130,37 @@ html {
     color: #8c363e;
 }
 
+.inline_link {
+    color: #3eb6ed;
+}
+
+/*iframe handling */
+.iframe_wrapper {
+    width: 272px;
+    height: 137px;
+}
+
+.iframe_section {
+    flex: 0 0 30%;
+    padding: 40px 0 0 20px;
+}
+
+/* iframes don't scale like images do */
+.iframe_row {
+    display: flex;
+
+}
+
 /* Sidebar Menu */
 
 .menu .image {
-    margin-top: 60px;
+    margin: 0px 0px 30px 0px;
 }
 
 .menu .image img {
-    width: 140px;
-    height: 140px;
+    /*width badge pic .66x height*/
+    width: 165px; 
+    height: 250px;
     border-radius: 50%;
     text-align: center;
 }
@@ -156,34 +179,33 @@ html {
     color: #fff;
 }
 
-.menu .social-network {
+.social-network {
     margin-top: 60px;
 }
 
-.menu .social-network ul li {
+.social-network ul li {
     margin: 0 3px;
 }
 
-.menu .social-network ul li a {
-    width: 40px;
-    height: 40px;
+.social-network ul li a {
+    width: 60px;
+    height: 60px;
     display: inline-block;
     text-align: center;
-    line-height: 40px;
+    line-height: 60px;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 14px;
+    font-size: 60px;
     transition: all 0.5s;
 }
 
-.menu .social-network ul li a:hover {
+.social-network ul li a:hover {
     background-color: #fff;
     color: #a43f49;
 }
 
 .menu .copyright-text {
     position: relative;
-    margin-top: 60px;
 }
 
 .menu .copyright-text p {
@@ -193,7 +215,7 @@ html {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
-    font-size: 13px;
+    font-size: 5px;
 }
 
 .menu:before,
@@ -220,7 +242,7 @@ html {
 }
 
 .menu {
-    left: 10%;
+    left: 0%;
   -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-overflow-scrolling: touch;
   background-color: #a43f49;
@@ -255,8 +277,8 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    color: #a43f49;
-    background-color: #fff;
+    color: #b0504d;
+    background-color: #000;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -271,7 +293,7 @@ html {
 #menu-close {
     cursor: pointer;
     text-align: right;
-    color: #a43f49;
+    color: #b0504d;
     background-color: #fff;
     width: 100%;
     height: 60px;
@@ -285,11 +307,11 @@ html {
 
 .section {
     color: #fff;
-    width: 55%;
-    right: 10%;
-    left: 35%;
+    width: 70%;
+    right: 5%;
+    left: 25%;
     position: relative;
-    min-height: 100vh;
+    min-height: 10vh;
     padding-bottom: 80px;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 }
@@ -369,15 +391,16 @@ button:hover {
     border-top: 2px solid rgba(250, 250, 250, 0.1);
 }
 
+.left-image-post {
+    border-top: 2px solid rgba(250, 250, 250, 0.1);
+    padding-bottom: 60px;
+}
+
 .left-image img,
 .right-image img {
     border-radius: 5px;
 }
 
-.right-image-post h4,
-.left-image-post h4 {
-    margin-top: 30px;
-}
 
 .right-image-post p,
 .left-image-post p {
@@ -389,6 +412,18 @@ button:hover {
     margin-top: 30px;
 }
 
+.left-text {
+    text-align: left;
+}
+.image_section {
+    flex: 0 0 30%;
+    padding: 40px 0 0 20px;
+}
+
+.text_section {
+    flex: 0 0 70%;
+    padding: 40px 0 0 20px;
+}
 
 /* Services */
 
@@ -679,14 +714,14 @@ section.contact-me {
 
 @media screen and (max-width: 1680px) {
     .menu {
-        left: 5%;
+        left: 0%;
     }
 
     .section {
         color: #fff;
-        width: 65%;
+        width: 70%;
         right: 5%;
-        left: 30%;
+        left: 25%;
     }
 }
 
@@ -735,7 +770,7 @@ section.contact-me {
 
 @media screen and (max-width: 1280px) and (min-width: 846px) {
     .menu {
-        width: 25%;
+        width: 20%;
     }
 }
 
@@ -795,11 +830,28 @@ section.contact-me {
         width: 94%;
         margin: 3%;
     }
-    .left-image-post img {
+    .left-image-post img iframe {
         margin-bottom: 30px;
+        width: 0%;
+        display: none;
     }
     .right-image-post img {
         margin-top: 30px;
+        width: 0%;
+        display: none;
+    }
+
+    .image_section {
+        flex: 0 0 0%;
+    }
+
+    .iframe_section {
+        flex: 0 0 0%;
+        display: none;
+    }
+
+    .image_section img{
+        max-width: 400px;
     }
     .isotope-item {
         border-bottom: none;
@@ -809,3 +861,4 @@ section.contact-me {
         margin-bottom: 20px;
     }
 }
+
