@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <style>
+        @font-face {
+            font-family: 'EarthOrbiter';
+            src: url('assets/fonts/earthorbiter.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'SpaceFont';
+            src: url('assets/fonts/spaceFont.ttf') format('truetype');
+        }
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url('assets/images/background.png');
+            font-family: 'SpaceFont', Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        position: absolute;
+        top: 70%; /* Adjust the percentage as needed */
+        left: 50%;
+        transform: translate(-50%, -50%);
+            background-color: #0000005e;
+        padding: 20px;
+        border-radius: 10px;
+        min-height: 70%; /* Ensures the container covers at least 70% of the screen */
+        }
+
+        #main-heading {
+            margin-top: 20px;
+            font-size: 72px;
+            font-weight: bold;
+            font-family: 'EarthOrbiter', Arial, sans-serif;
+        }
+
+        #splash-image {
+            margin-top: 20px;
+        }
+
+        #game-description {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        #appstore-link {
+            font-size: 16px;
+            margin-top: 10px;
+            color:aqua;
+        }
+
+        #contact-heading {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #appstore-link a {
+            color: aqua; /* Change the link text color to aqua */
+        }
+
+        #developer-email {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="main-heading">Cytocell</div>
+        <div id="splash-image">
+            <img src="assets/images/splash.png" alt="Game Splash Image" width="300">
+        </div>
+        <div id="game-description">
+            Venture into Earth's primordial tidepools as the Cytocell. Use your trail to surround red cells and consume them. Grow to obtain more trails and absorb the multiplying masses.
+            <br>
+            Play now for free!
+        </div>
+        <div id="appstore-link">
+            <a href="#">Download on the App Store</a>
+        </div>
+        <div id="contact-heading">Contact the Developer</div>
+        <div id="developer-email">
+            agklein98@gmail.com
+        </div>
+    </div>
+</body>
+</html>
+
